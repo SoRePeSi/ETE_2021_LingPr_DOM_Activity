@@ -12,6 +12,7 @@ function clique(event) {
         var novoLi = document.createElement("li");
         novoLi.appendChild(novoLabel);
         novoLi.appendChild(botaoDelete());
+        novoLi.appendChild(checkBox());
 
         lista.appendChild(novoLi);
         //document.getElementById("but").innerHTML = lista.length;
@@ -28,8 +29,23 @@ function botaoDelete() {
     return botDel;
 }
 
-function deleteLi(target) {
+function deleteLi(event) {
     var botClick = event.target;
     var delLi = botClick.parentElement;
-    lista.removeChild(delLi);
+    delLi.remove();
+}
+
+function checkBox() {
+    var box = document.createElement("input");
+    box.className = "caixa";
+    box.setAttribute("type", "checkbox");
+    box.addEventListener("click", marcarBox);
+
+    return box;
+}
+
+function marcarBox(event) {
+    var checked = event.target;
+    var checkedTask = checked.parentElement;
+    checkedTask.toggle("done");
 }

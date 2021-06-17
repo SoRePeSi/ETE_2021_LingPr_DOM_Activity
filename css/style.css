@@ -188,3 +188,8 @@ body {
     border: 0;
     background-color: white;
 }
+
+.caixa{
+    position: absolute;
+    right: 10%;
+}

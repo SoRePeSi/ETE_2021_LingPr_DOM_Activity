@@ -1,5 +1,9 @@
+function aaa() {
+    document.querySelector("ul").style = "background-color:blue";
+
+}
+
 function clique(event) {
-    // bott = document.getElementsByClassName("dd btn btn-primary font-weight-bold todo-list-add-btn");
     event.preventDefault();
 
     var texto = document.querySelector("input");
@@ -23,8 +27,9 @@ function clique(event) {
 
 function botaoDelete() {
     const botDel = document.createElement("span");
+    botDel.style = "position: absolute; right: 5%;";
     botDel.innerHTML = "X";
-    botDel.className = "but";
+    botDel.className = "close";
     botDel.addEventListener("click", deleteLi);
     return botDel;
 }
@@ -37,7 +42,7 @@ function deleteLi(event) {
 
 function checkBox() {
     var box = document.createElement("input");
-    box.className = "caixa";
+    box.className = "form-check-input";
     box.setAttribute("type", "checkbox");
     box.addEventListener("click", marcarBox);
 

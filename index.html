@@ -14,7 +14,7 @@
         src='https://stackpath.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.bundle.min.js'></script>
 </head>
 
-<body>
+<body onload="aaa()">
     <script src="script.js"></script>
     <div class="page-content page-container padding" id="page-content">
         <div class="row container d-flex justify-content-center">
@@ -31,9 +31,13 @@
                             <ul class="d-flex flex-column-reverse todo-list">
                                 <li>
                                     <label class="form-check-label">
-                                        - Fazer tarefa de português.
+                                        - Digite algo e clique no botão azul para adicionar um item à lista.
                                     </label>
-                                    <span class="but"> X </span>
+                                </li>
+                                <li>
+                                    <label class="form-check-label">
+                                        - Clique no X para deletar um item.
+                                    </label>
                                 </li>
                             </ul>
                         </div>

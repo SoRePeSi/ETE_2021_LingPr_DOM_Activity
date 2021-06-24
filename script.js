@@ -9,6 +9,7 @@ function start() {
     }
 }
 
+
 // Add new item to list
 // Adicionar novo item à lista
 function clique(event) {
@@ -35,6 +36,19 @@ function clique(event) {
     }
 }
 
+// Create checkbox element
+// Criar elemento checkbox
+function checkBox() {
+    var box = document.createElement("input");
+    box.className = "form-check-input";
+    box.setAttribute("type", "checkbox");
+    box.value = 0;
+    box.addEventListener("click", marcarBox);
+
+    return box;
+}
+
+
 // Delete button (actually a span element)
 // Botão de deletar (na verdade um elemento span)
 function botaoDelete() {
@@ -52,18 +66,6 @@ function deleteLi(event) {
     var botClick = event.target;
     var delLi = botClick.parentElement;
     delLi.remove();
-}
-
-// Create checkbox element
-// Criar elemento checkbox
-function checkBox() {
-    var box = document.createElement("input");
-    box.className = "form-check-input";
-    box.setAttribute("type", "checkbox");
-    box.value = 0;
-    box.addEventListener("click", marcarBox);
-
-    return box;
 }
 
 // Check or uncheck checkbox
